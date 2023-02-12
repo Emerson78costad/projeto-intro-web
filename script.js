@@ -205,3 +205,10 @@ if(vingadores.original === true){
 
 console.log(filmesMarvel)
 
+// semana 5 
+// . Reescrevendo o relatório criado utilizando console.log() que começamos na semana 2, altere a forma que a característica de array dos itens seja escrita como um laço que guarde todos os valores da propriedade array do objeto em uma mesma string. 
+
+for(movie of filmesMarvel){
+    console.log(movie.nome)
+    console.log(movie.historia)
+}
