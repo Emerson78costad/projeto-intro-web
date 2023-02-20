@@ -12,11 +12,20 @@
 }
 
 .container {
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
     text-align: center;
+}
+.container-search{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+     
 }
 
 .bar-search {
-    margin: 20px;
+    margin: 0px;
     padding: 10px;
     width: 275px;
     height: 39px;
@@ -25,6 +34,8 @@
 .button-search {
     margin: 10px;
     padding: 10px;
+    width: 80px;
+    height: 42px;
 }
 h2{
     background-color: #ffff;
