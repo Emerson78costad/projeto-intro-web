@@ -283,11 +283,13 @@ acharfilme(vingadores)   */
 //  buscarobjeto(filmesMarvel)
  
 // Semana 11
-let input = document.getElementById("entrada").value
-let entra = toString(input)
+let input = document.getElementById("input").value
+ 
 const buscarFilme=()=>{
-    if(!entra == ""){
-        alert("Digite seu filme favorito")
+     
+    if(input === ""){
+        console.log(input)
+        console.log("Digite seu filme favorito")
     }else{
          retornaObjeto(filmesMarvel, input)
     }
@@ -298,11 +300,12 @@ const criarfilmes = (array)=>{
         section.innerHTML += `<section class="film">
 		
         <div class="film-poster">	
-        <h2><a href="${array[i].link}" target="_blank">${array[i].nome}</a></h2> 
+        
 			<div class="film-image">
 				<img src="${array[i].img}" />
             </div>
                 <ul class="list">
+                <h2><a href="${array[i].link}" target="_blank">${array[i].nome}</a></h2> 
                     <div><p><b>Sinopse:</b> ${array[i].historia}</p></div>
                     <li><b>Fase do filme:</b> ${array[i].fase}</li>
                     <li><b>Ano de lançamento:</b> ${array[i].lancou}</li>
@@ -312,34 +315,39 @@ const criarfilmes = (array)=>{
 	</section>`
     }
 }
+
 criarfilmes(filmesMarvel)
-function retornaObjeto( string) {
-    const retornaArray = array.filter((elemento)=>{
-        if(elemento.nome.toString().toLowerCase() == string.toLowerCase()){
-            //  console.log(elemento)
-            return `
-            <section class="film">
-		        <div class="film-poster">	
-                  <h2><a href="#" target="_blank">${array[i].nome}</a></h2> 
-			    <div class="film-image">
-				    <img src="${array[i].img}" />
-                </div>
-                    <ul class="list">
-                        <div><p><b>Sinopse:</b> ${array[i].historia}</p></div>
-                        <li><b>Fase do filme:</b> ${array[i].fase}</li>
-                        <li><b>Ano de lançamento:</b> ${array[i].lancou}</li>
-                        <li><b>Duração:</b>${array[i].tempo} Minutos</li>
-                    </ul>
-		        </div>
-	</section>`
-            
+
+function retornaObjeto(string) {
+    const retornaArray = filmesMarvel.filter((elemento)=>{
+        if(elemento.nome  == string  ){
+              console.log(elemento)
+                       
 
         }
     })
     if(retornaArray.length>=1){
-        console.log(retornaArray)
+        for(let i=0 ; i <filmesMarvel.length;i++){
+            section.innerHTML = `<section class="film">
+            <div class="film-poster">	
+            
+            <div class="film-image">
+                <img src="${array[i].img}" />
+            </div>
+                        <ul class="list">
+                        <h2><a href="${array[i].link}" target="_blank">${array[i].nome}</a></h2> 
+                            <div><p><b>Sinopse:</b> ${array[i].historia}</p></div>
+                            <li><b>Fase do filme:</b> ${array[i].fase}</li>
+                            <li><b>Ano de lançamento:</b> ${array[i].lancou}</li>
+                            <li><b>Duração:</b>${array[i].tempo} Minutos</li>
+                        </ul>
+                    </div>
+                </section>`
+        }
     }else{
         alert("Filme não localizado")
     }
 
 }
+
+ 

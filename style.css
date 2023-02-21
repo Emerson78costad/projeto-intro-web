@@ -4,6 +4,18 @@
     box-sizing: border-box;
 }
 
+.background {
+    background-image: url("./img/fundo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#search-label {
+    color: #fff;
+    padding: 16px;
+}
+
 .title {
     text-align: center;
     background-color: black;
@@ -17,75 +29,91 @@
     flex-direction: column;
     text-align: center;
 }
-.container-search{
+
+.container-search {
     display: flex;
     align-items: center;
-    justify-content: center;    
-     
+    justify-content: center;
+
 }
 
 .bar-search {
-    margin: 0px;
+    margin: 12px;
     padding: 10px;
     width: 275px;
     height: 39px;
 }
 
 .button-search {
-    margin: 10px;
-    padding: 10px;
+    margin: 15px;
+    padding: 12px;
     width: 80px;
     height: 42px;
 }
-h2{
-    background-color: #ffff;
-    width: 121px;
+
+h2 {
+    width: 288px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
 }
-a{
+
+a {
     text-decoration: none;
-    color:royalblue;
+    color: red;
 }
-.film{
+
+.film {
     align-items: center;
     display: flex;
     flex-direction: column;
 }
- 
+
 .film-poster {
-    width: 1000px;
-    height: 560px;
-    display: flex;
-    justify-content: center;
+    width: 720px;
+    height: 300px;
     background: beige;
     margin: 20px;
     padding: 0px;
     border-radius: 70px;
+    display: grid;
+    grid-template-columns: 34% 1fr;
+    justify-items: center;
+    align-items: center;
 }
+
 .film-image {
-    width: 40%;
+    width: 100%;
     height: 100%;
     border-radius: 20px;
     display: flex;
+    justify-content: start;
 }
- img{
-    width: 90%;
+
+img {
+    width: 170px;
     border-radius: 25px;
+    position: relative;
+    left: 50px;
 }
- 
- 
+
+
 ul.list {
-    background-color:green;
-    color:#ffff;
+    background-color: orange;
+    color: #ffff;
     width: 430px;
     padding: 26px;
     border-radius: 40px;
 }
+
 ul.list>li {
     list-style: none;
 }
 
 .container-movie {
     text-align: center;
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
 }
 
 .link-github {
@@ -99,5 +127,8 @@ ul.list>li {
 }
 
 .link-color {
-    color: blue;
+    color: red;
+    text-decoration: none;
 }
+
+ 
