@@ -29,7 +29,7 @@ const remake2 = true; // boolean
 
 const titulo3 = "The Incredible Hulk"
 const sinopse3 = "Um filme americano de super-herói de 2008 baseado no personagem Hulk da Marvel Comics, produzido pela Marvel Studios ";  // historia  do filme
-const duracao3 = 126;  // tempo em minutos 
+const duracao3 = 112;  // tempo em minutos 
 const ano3 = 2008; // anos de lançamento do filme
 const genero3 = "Ação, Aventura, Ficção Científica";
 const remake3 = true; // boolean
@@ -38,7 +38,7 @@ const remake3 = true; // boolean
 
 const titulo4 = "Captain America : The First Avenger"
 const sinopse4 = "Um filme de super-herói estadunidense de 2011, baseado no personagem Capitão América, da Marvel Comics.";  // historia  do filme
-const duracao4 = 126;  // tempo em minutos 
+const duracao4 = 124;  // tempo em minutos 
 const ano4 = 2011; // anos de lançamento do filme
 const genero4 = "Ação, Aventura, Ficção científica";
 const remake4 = true; // boolean
@@ -249,6 +249,7 @@ function acharfilme(objeto) {
     console.log(objeto)
     console.log("----")
 }
+
 
 let section = document.querySelector(".container-movie")
 /*  acharfilme(homemdeferro)
