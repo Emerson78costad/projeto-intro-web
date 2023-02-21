@@ -19,10 +19,10 @@ Esse é o projeto de introdução aos fundamentos do desenvolvimento Web. Aqui, 
 
 A página consiste em um HTML, ligado a um ou mais arquivos CSS, e um ou mais arquivos JS (recomendamos apenas um de cada, no entanto). O objetivo é conseguir criar uma página estática, depois estilizada, e por fim, dinâmica. A página vai catalogar (ou listar) itens que você escolher, e deve possuir um sistema simples de busca, que recebe um texto, e procura por nomes/títulos que correspondam a este texto.
 
-# lista de Filmes da Marvel 
+# Lista de Filmes da Marvel 
 
-[Exemplo]
-<img src="./img/Lista%20de%20Filmes%20da%20Marvel.png" alt="pagina"/>
+<p> <a href="https://github.com/Emerson78costad/projeto-intro-web/tree/EmersonCostaDantas/ProjetoIntroWeb">Pagina do Projeto</a></p>
+<img src="git add./img/Lista%20de%20Filmes%20da%20Marvel.png" alt="pagina"/>
 
  
 
