@@ -21,7 +21,8 @@ A página consiste em um HTML, ligado a um ou mais arquivos CSS, e um ou mais ar
 
 # lista de Filmes da Marvel 
 
-[Exemplo](./img/Lista%20de%20Filmes%20da%20Marvel.png)
+[Exemplo]
+<img src="./img/Lista%20de%20Filmes%20da%20Marvel.png" alt="pagina"/>
 
  
 
