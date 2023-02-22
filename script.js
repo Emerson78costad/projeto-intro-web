@@ -253,6 +253,7 @@ for(let i=0;i<filmesMarvel.length;i++){
 }
 
 
+ 
 function acharfilme(objeto) {
     console.log(" Filme retorna como objeto")
     console.log(objeto)
@@ -393,3 +394,5 @@ function recarregarFilmes(){
      }
 
  } */
+ 
+ 
