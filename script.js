@@ -18,7 +18,7 @@ const remake1 = true; // boolean
 
 // Thor: Love and Thunder
 
-const titulo2 = "Thor: Love and Thunder"
+const titulo2 = "Thor Love and Thunder"
 const sinopse2 = "Um filme estadunidense de super-herói de 2022 baseado no personagem Thor, da Marvel Comics";  // historia  do filme
 const duracao2 = 119;  // tempo em minutos 
 const ano2 = 2022; // anos de lançamento do filme
@@ -36,7 +36,7 @@ const remake3 = true; // boolean
 
 // Captain America : The First Avenger
 
-const titulo4 = "Captain America : The First Avenger"
+const titulo4 = "Captain America The First Avenger"
 const sinopse4 = "Um filme de super-herói estadunidense de 2011, baseado no personagem Capitão América, da Marvel Comics.";  // historia  do filme
 const duracao4 = 124;  // tempo em minutos 
 const ano4 = 2011; // anos de lançamento do filme
@@ -45,7 +45,7 @@ const remake4 = true; // boolean
 
 // Avengers: Endgame
 
-const titulo5 = "Avengers: Endgame"
+const titulo5 = "Avengers Endgame"
 const sinopse5 = "Um filme de super-herói americano de 2019, baseado na equipe Vingadores da Marvel Comics";  // historia  do filme
 const duracao5 = 181;  // tempo em minutos 
 const ano5 = 2019; // anos de lançamento do filme
@@ -146,8 +146,8 @@ const hulk = {
     original: remake3,
     img: "./img/Hulk.jpg",
     fase: "saga multiverso",
-    fase :"Saga infinita",
-    link :"https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)"
+    fase: "Saga infinita",
+    link: "https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)"
 
 }
 
@@ -162,13 +162,13 @@ const capitao = {
     tipo: genero4,
     original: remake4,
     img: "./img/CapitaoAmerica.jpg",
-    fase :"Saga infinita",
-    link :"https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger"
+    fase: "Saga infinita",
+    link: "https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger"
 
 }
 console.log(capitao)
 
-let vingadores = {
+const vingadores = {
     nome: titulo5,
     historia: sinopse5,
     tempo: duracao5,
@@ -176,7 +176,7 @@ let vingadores = {
     tipo: genero5,
     original: remake5,
     img: "./img/Avengers.jpg",
-    fase :"Saga Multiverso",
+    fase: "Saga Multiverso",
     link: "https://en.wikipedia.org/wiki/Avengers:_Endgame"
 
 }
@@ -184,7 +184,9 @@ let vingadores = {
 // Semana 4
 // Adicione os novos objetos no array de objetos, utilizando o push()
 const filmesMarvel = []
-filmesMarvel.push(homemdeferro,hulk,thor,capitao,vingadores)
+filmesMarvel.push(homemdeferro, hulk, thor, capitao, vingadores)
+
+ 
 /* if (homemdeferro.original === true) {
     filmesMarvel.push(homemdeferro)
 } else {
@@ -216,31 +218,38 @@ if (vingadores.original === true) {
 } */
 
 
+for (let i = 0; i < filmesMarvel.length; i++) {
+    console.log(filmesMarvel[i]);
+
+}
 
 //  Semana 5 
 
-for (var obj of filmesMarvel) {
+ for (var obj of filmesMarvel) {
     for (var valor in obj) {
         console.log(`${valor} : ${obj[valor].toString()} \n`)
     }
     console.log("\n ");
-   
-}
+
+}  
 
 
 //  Semana 6.1
 const mostrafilme = (item) => {
-    console.log("------",
-    `Nome: ${item.nome}`, 
-    `Snopise: ${item.historia}`,
-    `Duração: ${item.tempo}`,
-    `Gênero: ${item.tipo}`,
-    `É original: ${item.original}`,
-    `Saga : ${item.fase}` ,"----");
+    let string = ''
+    string += `Nome: ${item.nome} ` +
+        `Snopise: ${item.historia} ` +
+        `Duração: ${item.tempo} ` +
+        `Gênero: ${item.tipo} ` +
+        `É original: ${item.original} ` +
+        `Saga : ${item.fase}`
+        console.log("Semana 6");
+    console.log(string)
+
 
 }
-for (var i = 0; i < filmesMarvel.length; i++) {
-    mostrafilme(filmesMarvel[i])
+for(let i=0;i<filmesMarvel.length;i++){
+ mostrafilme(filmesMarvel[i])
 }
 
 
@@ -250,54 +259,84 @@ function acharfilme(objeto) {
     console.log("----")
 }
 
-
-let section = document.querySelector(".container-movie")
-/*  acharfilme(homemdeferro)
+acharfilme(homemdeferro)
 acharfilme(thor)
+
 acharfilme(hulk)
 acharfilme(capitao)
-acharfilme(vingadores)   */
+acharfilme(vingadores)
 
+let section = document.querySelector(".container-movie")
 // Semana 6.2 Crie uma função que recebe um array de objetos e uma string. Esta função deve retornar um objeto
 
-/* function retornaObjeto(array, string) {
-    const retornaArray = array.filter((elemento)=>{
-        if(elemento.nome.toString().toLowerCase() == string.toLowerCase()){
+function retornaObjeto(array, string) {
+    const retornaArray = array.filter((elemento) => {
+        if (elemento.nome.toString().toLowerCase() == string.toLowerCase()) {
             //  console.log(elemento)
             return elemento
-
         }
     })
-    if(retornaArray.length>=1){
+    if (retornaArray.length >= 1) {
         console.log(retornaArray)
-    }else{
+    } else {
         alert("Filme não localizado")
-    }
-
-} */
- /* const buscarobjeto=(array)=>{
-     retornaObjeto(array, "saga infinita")  ; 
-     retornaObjeto(array, "saga multiverso");
-    
-    
-}   */
-//  buscarobjeto(filmesMarvel)
- 
-// Semana 11
-let input = document.getElementById("input").value
- 
-const buscarFilme=()=>{
-     
-    if(input === ""){
-        console.log(input)
-        console.log("Digite seu filme favorito")
-    }else{
-         retornaObjeto(filmesMarvel, input)
     }
 }
 
-const criarfilmes = (array)=>{
-    for(i=0; i<array.length;i++){
+/* const buscarobjeto=(array)=>{
+    retornaObjeto(array, "saga infinita")  ; 
+    retornaObjeto(array, "saga multiverso");
+   
+   
+}   */
+//  buscarobjeto(filmesMarvel)
+
+
+// Semana 11
+let input = document.getElementById("input")
+let entrada =input.value
+const buscarFilme = () => {
+
+    if (input.value == "") {
+        console.log(input.value)
+        alert("Digite seu filme favorito")
+    } else {
+        objetoEncontrado(filmesMarvel, input.value)
+
+    }
+}
+function objetoEncontrado(array, string) {
+    const retornaObjeto = array.filter((elemento) => {
+        if (elemento.nome.toString().toLowerCase() == string.toLowerCase()) {
+            console.log(elemento)
+            return section.innerHTML = `<section class="film">
+                            <div class="film-poster">	
+                                <div class="film-image">
+                                    <img src="${elemento.img}" />
+                                </div>
+                                    <ul class="list">
+                                    <h2><a href="${elemento.link}" target="_blank">${elemento.nome}</a></h2> 
+                                        <div><p><b>Sinopse:</b> ${elemento.historia}</p></div>
+                                        <li><b>Fase do filme:</b> ${elemento.fase}</li>
+                                        <li><b>Ano de lançamento:</b> ${elemento.lancou}</li>
+                                        <li><b>Duração:</b>${elemento.tempo} Minutos</li>
+                                    </ul>
+                            </div>
+                        </section>`
+        }
+    })
+
+    if (retornaObjeto.length >= 1) {
+        console.log(retornaObjeto)
+    } else {
+        alert("Filme não Encontrado")
+    }
+}
+
+
+
+const criarfilmes = (array) => {
+    for (i = 0; i < array.length; i++) {
         section.innerHTML += `<section class="film">
 		
         <div class="film-poster">	
@@ -319,36 +358,38 @@ const criarfilmes = (array)=>{
 
 criarfilmes(filmesMarvel)
 
-function retornaObjeto(string) {
-    const retornaArray = filmesMarvel.filter((elemento)=>{
-        if(elemento.nome  == string  ){
-              console.log(elemento)
-                       
 
-        }
-    })
-    if(retornaArray.length>=1){
-        for(let i=0 ; i <filmesMarvel.length;i++){
-            section.innerHTML = `<section class="film">
-            <div class="film-poster">	
-            
-            <div class="film-image">
-                <img src="${array[i].img}" />
-            </div>
-                        <ul class="list">
-                        <h2><a href="${array[i].link}" target="_blank">${array[i].nome}</a></h2> 
-                            <div><p><b>Sinopse:</b> ${array[i].historia}</p></div>
-                            <li><b>Fase do filme:</b> ${array[i].fase}</li>
-                            <li><b>Ano de lançamento:</b> ${array[i].lancou}</li>
-                            <li><b>Duração:</b>${array[i].tempo} Minutos</li>
-                        </ul>
-                    </div>
-                </section>`
-        }
-    }else{
-        alert("Filme não localizado")
-    }
-
+function recarregarFilmes(){
+    section.innerHTML =""
+    criarfilmes(filmesMarvel)
 }
 
- 
+/*  function retornaObjeto(string) {
+     const retornaArray = filmesMarvel.filter((elemento) => {
+         if (elemento.nome == string) {
+             console.log(elemento)
+         }
+     })
+     if (retornaArray.length >= 1) {
+         for (let i = 0; i < filmesMarvel.length; i++) {
+             section.innerHTML = `<section class="film">
+         <div class="film-poster">	
+         
+         <div class="film-image">
+             <img src="${array[i].img}" />
+         </div>
+                     <ul class="list">
+                     <h2><a href="${array[i].link}" target="_blank">${array[i].nome}</a></h2> 
+                         <div><p><b>Sinopse:</b> ${array[i].historia}</p></div>
+                         <li><b>Fase do filme:</b> ${array[i].fase}</li>
+                         <li><b>Ano de lançamento:</b> ${array[i].lancou}</li>
+                         <li><b>Duração:</b>${array[i].tempo} Minutos</li>
+                     </ul>
+                 </div>
+             </section>`
+         }
+     } else {
+         alert("Filme não localizado")
+     }
+
+ } */
