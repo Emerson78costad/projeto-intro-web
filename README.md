@@ -21,8 +21,6 @@ A página consiste em um HTML, ligado a um ou mais arquivos CSS, e um ou mais ar
 
 # Lista de Filmes da Marvel 
 
-<p> <a href="https://github.com/Emerson78costad/projeto-intro-web/tree/EmersonCostaDantas/ProjetoIntroWeb">Pagina do Projeto</a></p>
-
 <p>Imagem da Pagina<p>
 
 <img src="./img/foto-pagina.png"/>
